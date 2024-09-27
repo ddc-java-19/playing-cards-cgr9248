@@ -1,7 +1,8 @@
-package edu.cnm.deepdive;
+package edu.cnm.deepdive.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -28,6 +29,11 @@ public class Deck {
 
   public void sort() {
     Collections.sort(cards);
+    iterator = cards.iterator();
+  }
+
+  public void sort(Comparator<Card> comparator) {
+    cards.sort(comparator);
     iterator = cards.iterator();
   }
 

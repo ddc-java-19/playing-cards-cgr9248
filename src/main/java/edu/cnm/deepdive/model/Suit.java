@@ -1,4 +1,4 @@
-package edu.cnm.deepdive;
+package edu.cnm.deepdive.model;
 
 public enum Suit {
 
