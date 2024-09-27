@@ -2,9 +2,8 @@ package edu.cnm.deepdive;
 
 import edu.cnm.deepdive.model.Deck;
 import edu.cnm.deepdive.service.ColorComparator;
-import java.sql.SQLOutput;
 
-public class Main {
+public class Scratch {
 
   public static void main(String[] args) {
     Deck deck = new Deck();
