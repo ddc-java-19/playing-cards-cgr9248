@@ -1,6 +1,6 @@
 package edu.cnm.deepdive;
 
-public class Card {
+public class Card implements Comparable<Card> {
 
   private final Rank rank;
   private final Suit suit;
@@ -25,4 +25,12 @@ public class Card {
     return stringForm;
   }
 
+  @Override
+  public int compareTo(Card other) {
+    int comparison = this.suit.compareTo(other.suit);
+    if (comparison == 0) {
+      comparison = this.rank.compareTo(other.rank);
+    }
+    return comparison;
+  }
 }

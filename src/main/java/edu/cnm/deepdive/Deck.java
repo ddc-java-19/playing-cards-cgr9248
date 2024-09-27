@@ -26,6 +26,11 @@ public class Deck {
     iterator = cards.iterator();
   }
 
+  public void sort() {
+    Collections.sort(cards);
+    iterator = cards.iterator();
+  }
+
   public Card deal() {
     if (!iterator.hasNext()) {
       shuffle();
