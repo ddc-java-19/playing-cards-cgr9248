@@ -1,7 +1,6 @@
 package edu.cnm.deepdive;
 
 import edu.cnm.deepdive.model.Deck;
-import edu.cnm.deepdive.service.ColorComparator;
 
 public class Scratch {
 
@@ -12,7 +11,7 @@ public class Scratch {
     System.out.println(deck);
     deck.sort();
     System.out.println(deck);
-    deck.sort(new ColorComparator());
+   // deck.sort(new ColorComparator());
     System.out.println(deck);
     /*
     while (!deck.isEmpty()) {

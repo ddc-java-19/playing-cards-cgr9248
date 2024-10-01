@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+import java.util.random.RandomGenerator;
 
 public class Deck {
 
@@ -23,6 +24,13 @@ public class Deck {
   }
 
   public void shuffle() {
+    RandomGenerator rng = RandomGenerator.of ("Xoshiro256PlusPlus");
+    for(int dest = cards.size () - 1; dest > 0; dest--) {
+      int source = rng.nextInt(dest + 1);
+      Card temp = cards.get(source);
+      cards.set(source, cards.get(dest));
+      cards.set(dest, temp);
+    }
     Collections.shuffle(cards);
     iterator = cards.iterator();
   }
